@@ -7,7 +7,7 @@ class Post < ActiveRecord::Base
   CLICK_BAIT_PATTERNS = [ /Won't Believe/i,/Secret/i,/Top [0-9]*/i, /Guess/i]
 
   def is_clickbait?
-    if CLICK_BAIT_PATTERNS.NONE? do |p|
+    if CLICK_BAIT_PATTERNS.none? do |p|
       p.match title
     end
     errors.add(:title, "must be clickbait")
